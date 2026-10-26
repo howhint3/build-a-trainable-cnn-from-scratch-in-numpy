@@ -22,8 +22,12 @@ def row_max(matrix):
     big = np.amax(matrix, axis = 1 , keepdims=True)
     return big
 
-# Step 3 - row_sum (not yet solved)
-# TODO: implement
+# Step 3 - row_sum
+import numpy as np
+
+def row_sum(matrix):
+    big = np.sum(matrix, axis = 1, keepdims=True)
+    return big
 
 # Step 4 - exp_shifted (not yet solved)
 # TODO: implement
