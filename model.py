@@ -38,8 +38,12 @@ def exp_shifted(logits):
     finnal = np.exp(finnal)
     return finnal
 
-# Step 5 - stable_softmax (not yet solved)
-# TODO: implement
+# Step 5 - stable_softmax
+def stable_softmax(logits):
+    x = exp_shifted(logits)
+    y = row_sum(x)
+    z = x / y
+    return z
 
 # Step 6 - one_hot (not yet solved)
 # TODO: implement
