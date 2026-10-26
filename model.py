@@ -29,8 +29,14 @@ def row_sum(matrix):
     big = np.sum(matrix, axis = 1, keepdims=True)
     return big
 
-# Step 4 - exp_shifted (not yet solved)
-# TODO: implement
+# Step 4 - exp_shifted
+import numpy as np
+
+def exp_shifted(logits):
+    maxmum = row_max(logits)
+    finnal = logits - maxmum
+    finnal = np.exp(finnal)
+    return finnal
 
 # Step 5 - stable_softmax (not yet solved)
 # TODO: implement
