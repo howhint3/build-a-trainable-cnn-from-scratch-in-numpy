@@ -56,8 +56,12 @@ def gather_true_class_probs(probs, labels):
     z = probs[np.arange(len(probs)), labels]
     return z
 
-# Step 8 - cross_entropy_loss (not yet solved)
-# TODO: implement
+# Step 8 - cross_entropy_loss
+import numpy as np
+
+def cross_entropy_loss(probs, labels, eps=1e-12):
+    ans = np.mean(np.log(np.clip(gather_true_class_probs(probs, labels), eps, 1.0)))* -1
+    return ans
 
 # Step 9 - accuracy (not yet solved)
 # TODO: implement
